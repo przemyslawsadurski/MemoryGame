@@ -33,7 +33,7 @@ struct ContentView: View {
                     }
                     .foregroundColor(.blue)
                 }
-                /*HStack {
+                HStack {
                     Button(action: {
                         if numberOfCards < cards.count * 2 {
                             numberOfCards += 2
@@ -53,7 +53,7 @@ struct ContentView: View {
                     .disabled(numberOfCards <= 2)
                 }
                 .font(.largeTitle)
-                .padding()*/
+                .padding()
             }
         }
     }
@@ -61,3 +61,28 @@ struct ContentView: View {
 #Preview {
     ContentView()
 }
+
+/*
+func themeChooser() -> (Array<String>,Int) {
+    if (themeNumber == 1) {
+        return (emojis1.shuffled(),emojis1.count)
+    }
+    if (themeNumber == 2) {
+        return (emojis2.shuffled(),emojis2.count)
+    } else {
+        return (emojis2.shuffled(), emojis3.count)
+    }
+}
+
+func adjustCardNumber(by offset: Int, symbol: String) -> some View {
+ Button(action: {
+    cardNumber += offset
+    } , label: {
+    Image(systemName:symbol)
+        .font(.largeTitle)
+    })
+    .disabled(cardNumber + offset < 2 || cardNumber + offset > themeChooser().0.count)
+}
+
+}
+*/
